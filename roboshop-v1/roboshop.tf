@@ -31,6 +31,7 @@ resource "aws_route53_record" "mongodb" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.mongodb.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "catalogue" {
   ami           = "ami-03265a0778a880afb"
@@ -47,6 +48,7 @@ resource "aws_route53_record" "catalogue" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.catalogue.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "redis" {
   ami           = "ami-03265a0778a880afb"
@@ -63,6 +65,7 @@ resource "aws_route53_record" "redis" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "user" {
   ami           = "ami-03265a0778a880afb"
@@ -79,6 +82,7 @@ resource "aws_route53_record" "user" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.user.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "cart" {
   ami           = "ami-03265a0778a880afb"
@@ -95,6 +99,7 @@ resource "aws_route53_record" "cart" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.cart.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "mysql" {
   ami           = "ami-03265a0778a880afb"
@@ -111,6 +116,7 @@ resource "aws_route53_record" "mysql" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.mysql.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "shipping" {
   ami           = "ami-03265a0778a880afb"
@@ -127,6 +133,7 @@ resource "aws_route53_record" "shipping" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.shipping.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "rabbitmq" {
   ami           = "ami-03265a0778a880afb"
@@ -143,6 +150,7 @@ resource "aws_route53_record" "rabbitmq" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.rabbitmq.private_ip]
+  allow_overwrite = true
 }
 resource "aws_instance" "payment" {
   ami           = "ami-03265a0778a880afb"
@@ -159,4 +167,5 @@ resource "aws_route53_record" "payment" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.payment.private_ip]
+  allow_overwrite = true
 }
