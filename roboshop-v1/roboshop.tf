@@ -13,6 +13,7 @@ resource "aws_route53_record" "frontend" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
+  allow_overwrite = true
 }
 
 resource "aws_instance" "mongodb" {
