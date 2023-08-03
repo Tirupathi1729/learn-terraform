@@ -1,4 +1,4 @@
 
 output "max" {
-        value=" The max value is max(5, 12, 9)"
+        value=" The max value is ${max(5, 12, 9)}"
 }
