@@ -14,10 +14,16 @@ variable "fruit_name2" {
 
   default = {
     apple=100
+    {
+    stock=100
+  }
     mango=100
+{
+        stock=200
+}
 
   }
 }
 output "out12" {
-  value = var.fruit_name2
+  value = var.fruit_name2["apple"].stock
 }
