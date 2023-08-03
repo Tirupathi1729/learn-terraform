@@ -23,7 +23,7 @@ variable "fruit_name5" {
   mango=200
 }
 output "plain_map" {
-  value = "vars.fruit_name5"
+  value = "var.fruit_name5"
 }
 
 variable "fruit_name2" {
