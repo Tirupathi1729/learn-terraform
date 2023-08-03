@@ -2,7 +2,7 @@ variable "fruit_name" {
   default = "mango"
 
 }
-output "out" {
+output "first" {
   value = var.fruit_name
 }
 
@@ -10,13 +10,21 @@ output "out" {
 variable "fruit_name1" {
   default =["mango","appple","banana"]
 }
-output "out11" {
+output "list" {
   value = var.fruit_name1["1"]
 }
-output "selected_fruits" {
+output "list_slice" {
   value = slice(var.fruit_name1, 0, 2)     #slice function
 }
 
+variable "fruit_name5" {
+  default=1
+  apple=100
+  mango=200
+}
+output "plain_map" {
+  value = "vars.fruit_name5"
+}
 
 variable "fruit_name2" {
 
@@ -32,11 +40,11 @@ variable "fruit_name2" {
   }
 }
 
-output "out12" {
+output "nested_map" {
   value = var.fruit_name2["apple"]
 
 }
-output "out13" {
+output "sting_message" {
   value = "stock of apples is ${var.fruit_name2["apple"].stock}"
 
 }
@@ -50,13 +58,13 @@ variable "fruit_name4" {
   }
 
 }
-output "out22" {
+output "name" {
   value = "my name is ${var.fruit_name4.name}"
 }
 
 
 
-output "fruits_output" {
+output "list_map" {
   value = [var.fruit_name1[0], "my name is ${var.fruit_name4.name}"]
 }
 output "fruits_output1" {
