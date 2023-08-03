@@ -5,6 +5,8 @@ variable "fruit_name" {
 output "out" {
   value = var.fruit_name
 }
+
+
 variable "fruit_name1" {
   default =["mango","appple","banana"]
 }
@@ -14,6 +16,8 @@ output "out11" {
 output "selected_fruits" {
   value = slice(var.fruit_name1, 0, 2)     #slice function
 }
+
+
 variable "fruit_name2" {
 
   default = {
@@ -36,6 +40,8 @@ output "out13" {
   value = "stock of apples is ${var.fruit_name2["apple"].stock}"
 
 }
+
+
 variable "fruit_name4" {
   default ={
     number = 10
@@ -43,14 +49,16 @@ variable "fruit_name4" {
     for_name = true
   }
 
-
-
-
 }
 output "out22" {
   value = "my name is ${var.fruit_name4.name}"
 }
 
+
+
 output "fruits_output" {
+  value = [var.fruit_name1[0], "my name is ${var.fruit_name4.name}"]
+}
+output "fruits_output1" {
   value = [var.fruit_name1[0], "my name is ${var.fruit_name4.name}"]
 }
