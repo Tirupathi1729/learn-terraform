@@ -6,10 +6,13 @@ output "out" {
   value = var.fruit_name
 }
 variable "fruit_name1" {
-  default =["mango","appple"]
+  default =["mango","appple","banana"]
 }
 output "out11" {
   value = var.fruit_name1["1"]
+}
+output "selected_fruits" {
+  value = slice(var.fruit_name1, 0, 2)
 }
 variable "fruit_name2" {
 
