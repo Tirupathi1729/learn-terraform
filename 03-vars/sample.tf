@@ -55,7 +55,7 @@ variable "fruit_name4" {
   default ={
     number = 10
     name = "Tirupathi"
-    for_name = false
+    for_name = true
   }
 
 }
