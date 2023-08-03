@@ -1,6 +1,6 @@
-variable "first" {
-  default = "hello"
+variable "fruit_name" {
+  default = "mango"
 }
-output "first" {
-  value = "var.first"
+output "fruit_name" {
+  value = "var.fruit_name"
 }
