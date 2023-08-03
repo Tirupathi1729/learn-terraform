@@ -29,7 +29,7 @@ output "out12" {
 
 }
 output "out13" {
-  value = stock of apples is var.fruit_name2["apple"].stock
+  value = "stock of apples is ${var.fruit_name2["apple"].stock}"
 
 }
 
