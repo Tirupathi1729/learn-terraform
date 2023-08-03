@@ -15,6 +15,7 @@ variable "fruit_name2" {
   default = {
     apple = {
       stock = 100
+      price=10
     }
     mango = {
       stock = 200
@@ -24,5 +25,5 @@ variable "fruit_name2" {
 }
 
 output "out12" {
-  value = var.fruit_name2["apple"].stock
+  value = var.fruit_name2["apple"]
 }
