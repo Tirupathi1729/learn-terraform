@@ -52,5 +52,5 @@ output "out22" {
 }
 
 output "fruits_output" {
-  value = tuple(var.fruit_name1[0], "my name is ${var.fruit_name4.name}")
+  value = tuple(var.fruit_name1[0], var.fruit_name1[1])
 }
