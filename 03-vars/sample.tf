@@ -12,7 +12,7 @@ output "out11" {
   value = var.fruit_name1["1"]
 }
 output "selected_fruits" {
-  value = slice(var.fruit_name1, 0, 2)
+  value = slice(var.fruit_name1, 0, 2)     #slice function
 }
 variable "fruit_name2" {
 
@@ -51,3 +51,6 @@ output "out22" {
   value = "my name is ${var.fruit_name4.name}"
 }
 
+output "fruits_output" {
+  value = tuple(var.fruit_name1[0], "my name is ${var.fruit_name4.name}")
+}
