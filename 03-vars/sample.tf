@@ -40,6 +40,6 @@ variable "fruit_name4" {
 
 }
 output "out22" {
-  value = "my name is ${var.fruit_name4}"
+  value = "my name is ${var.fruit_name4.name}"
 }
 
