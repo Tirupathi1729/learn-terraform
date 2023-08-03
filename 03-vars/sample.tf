@@ -18,9 +18,10 @@ output "list_slice" {
 }
 
 variable "fruit_name5" {
-  default=1
-  apple=100
-  mango=200
+  default= {
+    apple = 100
+    mango = 200
+  }
 }
 output "plain_map" {
   value = "var.fruit_name5"
