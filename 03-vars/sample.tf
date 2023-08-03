@@ -49,6 +49,10 @@ output "sting_message" {
   value = "stock of apples is ${var.fruit_name2["apple"].stock}"
 
 }
+output "sting_message1" {
+  value = "stock of apples is ${var.fruit_name2["apple"].stock}"
+
+}
 
 
 variable "fruit_name4" {
