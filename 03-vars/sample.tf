@@ -36,7 +36,7 @@ output "out13" {
 variable "fruit_name4" {
   default = 10
   name = "Tirupathi"
-  is_name = true
+  for_name = true
 
 }
 output "out22" {
