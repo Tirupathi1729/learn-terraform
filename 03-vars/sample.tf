@@ -1,5 +1,6 @@
 variable "fruit_name" {
   default = "mango"
+
 }
 output "out" {
   value = var.fruit_name
@@ -8,7 +9,7 @@ variable "fruit_name1" {
   default =["mango","appple"]
 }
 output "out11" {
-  value = var.fruit_name1[0]
+  value = var.fruit_name1[*]
 }
 variable "fruit_name2" {
 
@@ -31,5 +32,14 @@ output "out12" {
 output "out13" {
   value = "stock of apples is ${var.fruit_name2["apple"].stock}"
 
+}
+variable "fruit_name4" {
+  default = 10
+  name = "Tirupathi"
+  is_name = true
+
+}
+output "out22" {
+  value = "my name is ${var.fruit_name4}"
 }
 
