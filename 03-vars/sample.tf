@@ -11,8 +11,8 @@ output "out11" {
   value = var.fruit_name1
 }
 variable "fruit_name2" {
-  default =["mango","appple"]
-  default1 = {
+
+  default = {
     apple=100
     mango=100
 
