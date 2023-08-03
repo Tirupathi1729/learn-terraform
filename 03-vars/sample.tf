@@ -10,4 +10,14 @@ variable "fruit_name1" {
 output "out11" {
   value = var.fruit_name1
 }
+variable "fruit_name2" {
+  default =["mango","appple"]
+  default1 = {
+    apple=100
+    mango=100
 
+  }
+}
+output "out12" {
+  value = var.fruit_name2
+}
