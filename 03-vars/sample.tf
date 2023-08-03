@@ -72,6 +72,4 @@ output "name" {
 output "list_map" {
   value = [var.fruit_name1[0], "my name is ${var.fruit_name4.name}"]
 }
-output "fruits_output1" {
-  value = ["fruit name is ${var.fruit_name1[0]}", "my name is ${var.fruit_name4.name}"]
-}
+
