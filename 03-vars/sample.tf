@@ -26,4 +26,10 @@ variable "fruit_name2" {
 
 output "out12" {
   value = var.fruit_name2["apple"]
+
 }
+output "out13" {
+  value = var.fruit_name2["apple"].stock
+
+}
+
