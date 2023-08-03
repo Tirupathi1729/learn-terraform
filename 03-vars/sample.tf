@@ -34,9 +34,14 @@ output "out13" {
 
 }
 variable "fruit_name4" {
-  default = 10
-  name = "Tirupathi"
-  #for_name = true
+  default ={
+    number = 10
+    name = "Tirupathi"
+    for_name = true
+  }
+
+
+
 
 }
 output "out22" {
