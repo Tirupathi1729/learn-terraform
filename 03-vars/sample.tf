@@ -13,11 +13,11 @@ output "out11" {
 variable "fruit_name2" {
 
   default = {
-    apple
+    apple=
     {
   stock = 100
     }
-     mango
+     mango=
    {
   stock = 200
    }
