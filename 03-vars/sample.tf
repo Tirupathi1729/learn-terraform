@@ -1,6 +1,6 @@
 variable "first" {
   default = "hello"
 }
-output "first" {
+output "out" {
   value = "var.first"
 }
