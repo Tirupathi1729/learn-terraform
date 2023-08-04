@@ -6,6 +6,9 @@ variable "components"{
     mongodb={
       name="mongodb_sg"
     }
+    frontend={
+      name="frontend_sg"
+    }
   }
 }
 
