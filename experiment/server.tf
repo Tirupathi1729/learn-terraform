@@ -4,6 +4,6 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = var.security_group
 
   tags = {
-    Name = var.server_name
+    Name = "${var.server_name}-user"
   }
 }
