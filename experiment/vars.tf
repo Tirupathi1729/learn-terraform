@@ -1,5 +1,5 @@
 resource "aws_instance" "instance" {
-  ami : var.amid_id
+  ami = var.amid_id
   instance_type = var.instance_type
 }
 variable "amid_id" {
