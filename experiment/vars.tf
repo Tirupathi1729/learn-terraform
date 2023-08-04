@@ -14,5 +14,5 @@ variable "instance_type" {
   default = "t2.micro"
 }
 variable "security_group" {
-  default = "sg-0cd32fc66a74591e4"
+  default = ["sg-0cd32fc66a74591e4"]
 }
