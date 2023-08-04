@@ -14,7 +14,7 @@ variable "zone_id" {
 variable "components" {
   default = {
     frontend={name="frontend-dev"}
-    mongod={name="mongodb-dev"}
+    mongodb={name="mongodb-dev"}
     catalogue={name="catalogue-dev"}
     redis={name="redis-dev"}
     user={name="user-dev"}
@@ -32,7 +32,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids = var.security_group
 
   tags = {
-    Name = lookup(each.value,"name",null )
+    Name = lookup(each.key,"name",null )
   }
 }
 resource "aws_route53_record" "record" {
