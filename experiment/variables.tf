@@ -7,3 +7,6 @@ variable "instance_type" {
 variable "security_group" {
   default = ["sg-0cd32fc66a74591e4"]
 }
+variable "server_name" {
+
+}
