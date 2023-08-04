@@ -22,6 +22,7 @@ variable "components" {
     mysql={name="mysql-dev"}
     shipping={name="shipping-dev"}
     rabbitmq={name="rabbitmq-dev"}
+    payment={name="payment-dev"}
   }
 }
 resource "aws_instance" "instance" {
