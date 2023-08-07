@@ -5,3 +5,7 @@ data "aws_ami_ids" "ami" {
 output "ami" {
   value = data.aws_ami_ids.ami
 }
+data "aws_ami_ids" "ami1" {
+  name_regex = "centos"
+  owners = ["973714476881"]
+}

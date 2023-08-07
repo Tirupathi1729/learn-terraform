@@ -2,8 +2,8 @@ module "test" {
   source = "./local-module"
 }
 output "ami" {
-  value = module.test
+  value = module.test      # what ever data is there in locL-module it prints all
 }
 output "specific_data" {
-  value = module.test.ami
+  value = module.test.ami    # To print specfic block data
 }
