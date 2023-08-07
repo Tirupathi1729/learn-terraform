@@ -16,3 +16,17 @@ resource "aws_route53_record" "record" {
   records = [aws_instance.instance.private_ip]
 
 }
+resource "null_resource" "ansible" {
+  depends_on = [
+    aws_route53_record.record
+  ]
+  provisioner "local-exec" {
+    command = <<EOF
+cd /home/centos/roboshop-ansible-roles
+git pull
+sleep 30
+ansible-playbook -i ${var.name}-dev.tirupathib74.online, main.yml -e ansible_user=centos -e ansible_password=Devops321 -e component=${var.name}
+EOF
+
+  }
+}
