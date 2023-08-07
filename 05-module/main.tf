@@ -4,3 +4,6 @@ module "test" {
 output "ami" {
   value = module.test
 }
+output "specific_data" {
+  value = module.test.ami
+}
