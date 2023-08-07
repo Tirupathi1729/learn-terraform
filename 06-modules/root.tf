@@ -11,5 +11,5 @@ output "all_local_module1" {
 
 
 variable "instance_type" {     # declaration
-  value = "t2.micro"
+  default = "t2.micro"
 }
