@@ -13,7 +13,7 @@ output "ami1" {
   value = data.aws_ami_ids.ami1
 }
 
-#Taking direct ami not selecting id's
+#Taking direct ami not selecting id's and creating instance
 data "aws_ami" "ami" {
   most_recent = true
   name_regex = "Centos-8-DevOps-Practice"
