@@ -11,5 +11,5 @@ data "aws_ami_ids" "amis" {
   owners = ["973714476881"]
 }
 output "ami1" {
-  value = data.aws_ami_ids.ami
+  value = data.aws_ami_ids.amis
 }
