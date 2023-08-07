@@ -12,3 +12,21 @@ data "aws_ami_ids" "ami1" {
 output "ami1" {
   value = data.aws_ami_ids.ami1
 }
+
+#Taking direct ami not selecting id's
+data "aws_ami" "ami" {
+  most_recent = true
+  name_regex = "Centos-8-DevOps-Practice"
+  owners = ["973714476881"]
+}
+output "one_ami" {
+  value = data.aws_ami.ami
+}
+
+resource "aws_instance" "instances" {
+
+  ami           = data.aws_ami.ami.id
+  instance_type = "t2.micro"
+  vpc_security_group_ids = ["sg-0cd32fc66a74591e4"]
+
+  }
