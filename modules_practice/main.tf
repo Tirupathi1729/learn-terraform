@@ -8,3 +8,7 @@ module "monday" {
 output "out" {
   value = module.monday     # output = hello
 }                           # output = good morning
+
+output "out1" {
+  value = module.monday.out     # output = hello
+}
