@@ -10,5 +10,5 @@ output "out" {
 }                           # output = good morning
 
 output "out1" {
-  value = module.monday.out     # output = hello
+  value = module.monday.out     # output = good morning
 }
