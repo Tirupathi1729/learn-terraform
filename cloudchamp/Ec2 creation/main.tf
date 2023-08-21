@@ -6,4 +6,3 @@ resource "aws_instance" "instance" {
     Name = "1st_instance"
   }
 }
-D
