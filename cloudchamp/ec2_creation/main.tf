@@ -1,7 +1,7 @@
 resource "aws_instance" "instance" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t2.micro"
-  count = 1
+  count = 1     #how many instances need to create
 
   tags = {
     Name = "1st_instance"
@@ -9,8 +9,8 @@ resource "aws_instance" "instance" {
 }
 
 resource "aws_security_group" "Tf_SG" {
-  name        = "security group using terraform"
-  description = "security group using terraform"
+  name        = "security group  creation using terraform"
+  description = "security group creation using terraform"
   vpc_id      = "vpc-095dcad0c8ac8c419"
 
   ingress {
