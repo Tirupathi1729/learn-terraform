@@ -1,4 +1,4 @@
-resource "aws_instance" "instance" {
+resource "aws_instance" "instances" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t2.micro"
   count = 1     #how many instances need to create
