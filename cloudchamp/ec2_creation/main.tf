@@ -2,7 +2,7 @@ resource "aws_instance" "web" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t2.micro"
   #count = 1     #how many instances need to create
-  security_groups = ["aws_security_group.allow_all1.name"]
+  security_groups = [aws_security_group.allow_all1.name]
 
   tags = {
     Name = "2nd_instance"
